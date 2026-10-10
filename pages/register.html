@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت‌نام | موبایل‌شاپ</title>
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/auth.css">
+
+    <script src="../js/auth.js" defer></script>
+</head>
+<body class="auth-page">
+
+    <main class="auth-container">
+        <section class="auth-card">
+
+            <a href="../index.html" class="auth-logo">
+                <span class="logo-icon">M</span>
+                <span>موبایل<span class="logo-orange">‌شاپ</span></span>
+            </a>
+
+            <div class="auth-heading">
+                <h1>ساخت حساب کاربری</h1>
+                <p>به خانواده موبایل‌شاپ خوش اومدی!</p>
+            </div>
+
+            <form id="registerForm" class="auth-form">
+
+                <div class="form-group">
+                    <label for="fullName">نام و نام خانوادگی</label>
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="نام کاملت رو وارد کن"
+                        autocomplete="name"
+                        required
+                        minlength="3">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">شماره موبایل</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="مثلاً 09123456789"
+                        autocomplete="tel"
+                        inputmode="numeric"
+                        pattern="09[0-9]{9}"
+                        maxlength="11"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">ایمیل <span>(اختیاری)</span></label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@gmail.com"
+                        autocomplete="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">رمز عبور</label>
+                    <div class="password-wrapper">
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="حداقل ۸ کاراکتر"
+                            autocomplete="new-password"
+                            minlength="8"
+                            required>
+                        <button type="button" class="toggle-password" data-target="password">
+                            نمایش
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">تکرار رمز عبور</label>
+                    <div class="password-wrapper">
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="رمز عبورت رو دوباره وارد کن"
+                            autocomplete="new-password"
+                            minlength="8"
+                            required>
+                        <button type="button" class="toggle-password" data-target="confirmPassword">
+                            نمایش
+                        </button>
+                    </div>
+                </div>
+
+                <label class="terms-label">
+                    <input type="checkbox" id="acceptTerms" required>
+                    <span>قوانین و مقررات سایت رو می‌پذیرم.</span>
+                </label>
+
+                <p id="registerMessage" class="auth-message" role="status" aria-live="polite"></p>
+
+                <button type="submit" class="auth-submit">
+                    ایجاد حساب کاربری
+                </button>
+
+            </form>
+
+            <div class="auth-switch">
+                <span>قبلاً ثبت‌نام کردی؟</span>
+                <a href="login.html">وارد شو</a>
+            </div>
+
+            <a href="../index.html" class="back-home">بازگشت به صفحه اصلی</a>
+
+        </section>
+    </main>
+
+</body>
+</html>

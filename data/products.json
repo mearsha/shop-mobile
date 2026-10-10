@@ -1,0 +1,202 @@
+[
+  {
+    "id": "poco-c85",
+    "name": "پوکو C85",
+    "brand": "Xiaomi",
+    "price": 73000000,
+    "image": "images/products/poco-c85.png",
+    "badge": "اقتصادی",
+    "description": "گوشی شیائومی پوکو C85 با حافظه ۲۵۶ گیگابایت و رم ۸ گیگابایت",
+    "url": "pages/product-details.html?id=poco-c85"
+  },
+  {
+    "id": "poco-c65",
+    "name": "پوکو C65",
+    "brand": "Xiaomi",
+    "price": 58000000,
+    "image": "images/products/poco-c65.png",
+    "badge": "",
+    "description": "گوشی اقتصادی شیائومی پوکو C65",
+    "url": "pages/product-details.html?id=poco-c65"
+  },
+  {
+    "id": "redmi-note-14-pro-plus",
+    "name": "ردمی نوت ۱۴ پرو پلاس",
+    "brand": "Xiaomi",
+    "price": 135000000,
+    "image": "images/products/redmi-note-14-pro-plus.png",
+    "badge": "پرفروش",
+    "description": "گوشی شیائومی ردمی نوت ۱۴ پرو پلاس",
+    "url": "pages/product-details.html?id=redmi-note-14-pro-plus"
+  },
+  {
+    "id": "xiaomi-14",
+    "name": "شیائومی ۱۴",
+    "brand": "Xiaomi",
+    "price": 190000000,
+    "image": "images/products/xiaomi-14.png",
+    "badge": "",
+    "description": "گوشی پرچمدار شیائومی ۱۴",
+    "url": "pages/product-details.html?id=xiaomi-14"
+  },
+  {
+    "id": "xiaomi-15",
+    "name": "شیائومی ۱۵",
+    "brand": "Xiaomi",
+    "price": 220000000,
+    "image": "images/products/xiaomi-15.png",
+    "badge": "جدید",
+    "description": "گوشی پرچمدار شیائومی ۱۵",
+    "url": "pages/product-details.html?id=xiaomi-15"
+  },
+  {
+    "id": "xiaomi-15-ultra",
+    "name": "شیائومی ۱۵ اولترا",
+    "brand": "Xiaomi",
+    "price": 340000000,
+    "image": "images/products/xiaomi-15-ultra.png",
+    "badge": "پرچمدار",
+    "description": "گوشی پرچمدار شیائومی ۱۵ اولترا",
+    "url": "pages/product-details.html?id=xiaomi-15-ultra"
+  },
+  {
+    "id": "galaxy-a36",
+    "name": "گلکسی A36",
+    "brand": "Samsung",
+    "price": 88000000,
+    "image": "images/products/galaxy-a36.png",
+    "badge": "",
+    "description": "گوشی سامسونگ گلکسی A36",
+    "url": "pages/product-details.html?id=galaxy-a36"
+  },
+  {
+    "id": "galaxy-a56",
+    "name": "گلکسی A56",
+    "brand": "Samsung",
+    "price": 123000000,
+    "image": "images/products/galaxy-a56.png",
+    "badge": "پرفروش",
+    "description": "گوشی سامسونگ گلکسی A56",
+    "url": "pages/product-details.html?id=galaxy-a56"
+  },
+  {
+    "id": "galaxy-s23-fe",
+    "name": "گلکسی S23 FE",
+    "brand": "Samsung",
+    "price": 95000000,
+    "image": "images/products/galaxy-s23-fe.png",
+    "badge": "",
+    "description": "گوشی سامسونگ گلکسی S23 FE",
+    "url": "pages/product-details.html?id=galaxy-s23-fe"
+  },
+  {
+    "id": "galaxy-s24-ultra",
+    "name": "گلکسی S24 Ultra",
+    "brand": "Samsung",
+    "price": 260000000,
+    "image": "images/products/galaxy-s24-ultra.png",
+    "badge": "پرچمدار",
+    "description": "گوشی سامسونگ گلکسی S24 Ultra",
+    "url": "pages/product-details.html?id=galaxy-s24-ultra"
+  },
+  {
+    "id": "galaxy-s25",
+    "name": "گلکسی S25",
+    "brand": "Samsung",
+    "price": 180000000,
+    "image": "images/products/galaxy-s25.png",
+    "badge": "جدید",
+    "description": "گوشی سامسونگ گلکسی S25",
+    "url": "pages/product-details.html?id=galaxy-s25"
+  },
+  {
+    "id": "galaxy-s25-ultra",
+    "name": "گلکسی S25 Ultra",
+    "brand": "Samsung",
+    "price": 280000000,
+    "image": "images/products/galaxy-s25-ultra.png",
+    "badge": "پرچمدار",
+    "description": "گوشی پرچمدار سامسونگ گلکسی S25 Ultra",
+    "url": "pages/product-details.html?id=galaxy-s25-ultra"
+  },
+  {
+    "id": "galaxy-s26-ultra",
+    "name": "گلکسی S26 Ultra",
+    "brand": "Samsung",
+    "price": 459000000,
+    "image": "images/products/galaxy-s26-ultra.png",
+    "badge": "پرچمدار",
+    "description": "گوشی پرچمدار سامسونگ گلکسی S26 Ultra",
+    "url": "pages/product-details.html?id=galaxy-s26-ultra"
+  },
+  {
+    "id": "iphone-13",
+    "name": "آیفون ۱۳",
+    "brand": "Apple",
+    "price": 195000000,
+    "image": "images/products/iphone-13.png",
+    "badge": "",
+    "description": "گوشی اپل آیفون ۱۳",
+    "url": "pages/product-details.html?id=iphone-13"
+  },
+  {
+    "id": "iphone-13-pro-max",
+    "name": "آیفون ۱۳ پرو مکس",
+    "brand": "Apple",
+    "price": 260000000,
+    "image": "images/products/iphone-13-pro-max.png",
+    "badge": "",
+    "description": "گوشی اپل آیفون ۱۳ پرو مکس",
+    "url": "pages/product-details.html?id=iphone-13-pro-max"
+  },
+  {
+    "id": "iphone-14",
+    "name": "آیفون ۱۴",
+    "brand": "Apple",
+    "price": 220000000,
+    "image": "images/products/iphone-14.png",
+    "badge": "",
+    "description": "گوشی اپل آیفون ۱۴",
+    "url": "pages/product-details.html?id=iphone-14"
+  },
+  {
+    "id": "iphone-15",
+    "name": "آیفون ۱۵",
+    "brand": "Apple",
+    "price": 288000000,
+    "image": "images/products/iphone-15.png",
+    "badge": "پیشنهاد ویژه",
+    "description": "گوشی اپل آیفون ۱۵",
+    "url": "pages/product-details.html?id=iphone-15"
+  },
+  {
+    "id": "iphone-15-pro-max",
+    "name": "آیفون ۱۵ پرو مکس",
+    "brand": "Apple",
+    "price": 380000000,
+    "image": "images/products/iphone-15-pro-max.png",
+    "badge": "",
+    "description": "گوشی اپل آیفون ۱۵ پرو مکس",
+    "url": "pages/product-details.html?id=iphone-15-pro-max"
+  },
+  {
+    "id": "iphone-16",
+    "name": "آیفون ۱۶",
+    "brand": "Apple",
+    "price": 331500000,
+    "image": "images/products/iphone-16.png",
+    "badge": "",
+    "description": "گوشی اپل آیفون ۱۶",
+    "url": "pages/product-details.html?id=iphone-16"
+  },
+  {
+    "id": "iphone-17",
+    "name": "آیفون ۱۷",
+    "brand": "Apple",
+    "price": 366000000,
+    "image": "images/products/iphone-17.png",
+    "badge": "جدید",
+    "description": "گوشی اپل آیفون ۱۷",
+    "url": "pages/product-details.html?id=iphone-17"
+  }
+]

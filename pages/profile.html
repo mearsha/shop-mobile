@@ -1,0 +1,132 @@
+ <!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پروفایل من | فروشگاه موبایل</title>
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/account.css">
+</head>
+<body>
+
+    <div id="siteHeader"></div>
+
+    <main class="profile-page">
+        <div class="container">
+
+            <div class="profile-heading">
+                <h1>پروفایل من</h1>
+                <p>اطلاعات حساب کاربری خودت رو مدیریت کن.</p>
+            </div>
+
+            <div class="profile-layout">
+
+                <aside class="profile-sidebar">
+                    <div class="profile-avatar" id="profileAvatar">م</div>
+                    <h2 id="profileName">کاربر</h2>
+                    <p id="profilePhone">شماره موبایل</p>
+
+                    <nav class="profile-menu">
+                        <a href="profile.html" class="profile-menu-link active">اطلاعات حساب</a>
+                        <a href="orders.html" class="profile-menu-link">سفارش‌های من</a>
+                        <a href="favorites.html" class="profile-menu-link">علاقه‌مندی‌ها</a>
+                        <button type="button" class="profile-menu-link logout-profile" id="profileLogout">خروج از حساب</button>
+                    </nav>
+                </aside>
+
+                <section class="profile-content">
+                    <div class="profile-section-heading">
+                        <h2>اطلاعات شخصی</h2>
+                        <p>اطلاعات حساب کاربری خودت رو مشاهده و ویرایش کن.</p>
+                    </div>
+
+                    <form id="profileForm" class="profile-form">
+
+                        <div class="profile-field">
+                            <label for="profileFullName">نام و نام خانوادگی</label>
+                            <input type="text" id="profileFullName" required minlength="3">
+                        </div>
+
+                        <div class="profile-field">
+                            <label for="profileEmail">ایمیل</label>
+                            <input type="email" id="profileEmail" placeholder="example@email.com">
+                        </div>
+
+                        <div class="profile-field">
+                            <label for="profilePhoneInput">شماره موبایل</label>
+                            <input type="tel" id="profilePhoneInput" readonly>
+                            <small>شماره موبایل فعلاً قابل تغییر نیست.</small>
+                        </div>
+
+                        <p id="profileMessage" class="profile-message" aria-live="polite"></p>
+
+                        <button type="submit" class="profile-save-btn">
+                            ذخیره تغییرات
+                        </button>
+
+                    </form>
+                        <div class="profile-section-heading password-section-heading">
+                        <h2>تغییر رمز عبور</h2>
+                        <p>برای امنیت حساب، ابتدا رمز فعلی خودت رو وارد کن.</p>
+                    </div>
+
+                    <form id="changePasswordForm" class="profile-form password-form">
+
+                        <div class="profile-field">
+                            <label for="currentPassword">رمز عبور فعلی</label>
+                            <input
+                                type="password"
+                                id="currentPassword"
+                                required
+                                autocomplete="current-password"
+                                placeholder="رمز فعلی"
+                            >
+                        </div>
+
+                        <div class="profile-field">
+                            <label for="newPassword">رمز عبور جدید</label>
+                            <input
+                                type="password"
+                                id="newPassword"
+                                required
+                                minlength="8"
+                                autocomplete="new-password"
+                                placeholder="حداقل ۸ کاراکتر"
+                            >
+                        </div>
+
+                        <div class="profile-field">
+                            <label for="confirmNewPassword">تکرار رمز عبور جدید</label>
+                            <input
+                                type="password"
+                                id="confirmNewPassword"
+                                required
+                                minlength="8"
+                                autocomplete="new-password"
+                                placeholder="رمز جدید رو دوباره وارد کن"
+                            >
+                        </div>
+
+                        <p id="passwordMessage" class="profile-message" aria-live="polite"></p>
+
+                        <button type="submit" class="profile-save-btn">
+                            تغییر رمز عبور
+                        </button>
+
+                    </form>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <div id="siteFooter"></div>
+
+    <script src="../js/header.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/profile.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+ <!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سفارش‌های من | موبایل‌شاپ</title>
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/account.css">
+    <link rel="stylesheet" href="../css/orders.css">
+</head>
+<body>
+
+    <div id="siteHeader"></div>
+
+    <main class="orders-page">
+        <div class="orders-container">
+
+            <div class="orders-heading">
+                <div>
+                    <span class="orders-eyebrow">حساب کاربری</span>
+                    <h1>سفارش‌های من</h1>
+                    <p>تمام خریدها و وضعیت سفارش‌هایت رو اینجا ببین.</p>
+                </div>
+
+                <a href="products.html" class="orders-shop-btn">
+                    ادامه خرید
+                </a>
+            </div>
+
+            <div class="orders-summary">
+                <div class="summary-card">
+                    <span class="summary-icon">▤</span>
+                    <div>
+                        <span>همه سفارش‌ها</span>
+                        <strong id="totalOrders">۰</strong>
+                    </div>
+                </div>
+
+                <div class="summary-card">
+                    <span class="summary-icon">◷</span>
+                    <div>
+                        <span>در حال پردازش</span>
+                        <strong id="pendingOrders">۰</strong>
+                    </div>
+                </div>
+
+                <div class="summary-card">
+                    <span class="summary-icon">✓</span>
+                    <div>
+                        <span>تحویل‌شده</span>
+                        <strong id="deliveredOrders">۰</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="orders-toolbar">
+                <h2>تاریخچه سفارش‌ها</h2>
+
+                <select id="orderFilter" aria-label="فیلتر سفارش‌ها">
+                    <option value="all">همه سفارش‌ها</option>
+                    <option value="processing">در حال پردازش</option>
+                    <option value="shipped">ارسال‌شده</option>
+                    <option value="delivered">تحویل‌شده</option>
+                    <option value="cancelled">لغوشده</option>
+                </select>
+            </div>
+
+            <div id="ordersList" class="orders-list"></div>
+
+            <div id="ordersEmpty" class="orders-empty" hidden>
+                <div class="empty-icon">🛍️</div>
+                <h2>هنوز سفارشی ثبت نکردی!</h2>
+                <p>وقتی خریدی انجام بدی، سفارش‌هات اینجا نمایش داده می‌شن.</p>
+                <a href="products.html" class="orders-shop-btn">
+                    مشاهده محصولات
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="siteFooter"></div>
+
+    <script src="../js/header.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/orders.js"></script>
+
+</body>
+</html>

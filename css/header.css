@@ -1,0 +1,358 @@
+/* =========================
+   هدر اصلی
+========================= */
+
+.site-header {
+    background: #151515;
+    border-bottom: 1px solid #303030;
+    position: relative;
+    z-index: 100;
+}
+
+.site-header .container {
+    width: min(1200px, 100% - 32px);
+    margin-inline: auto;
+}
+
+.header-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 18px 0;
+}
+
+/* لوگو */
+
+.site-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #ff7900;
+    color: #111;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.logo-text {
+    color: #fff;
+    font-size: 19px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.logo-text span {
+    color: #ff7900;
+}
+
+/* جست‌وجو */
+
+.header-search {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    max-width: 520px;
+    height: 46px;
+    background: #222;
+    border: 1px solid #383838;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.25s ease;
+}
+
+.header-search:focus-within {
+    border-color: #ff7900;
+}
+
+.search-icon {
+    padding: 0 12px;
+    color: #ff7900;
+    font-size: 25px;
+    flex-shrink: 0;
+}
+
+.header-search input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    font: inherit;
+    font-size: 13px;
+}
+
+.header-search input::placeholder {
+    color: #999;
+}
+
+.header-search button {
+    height: 100%;
+    padding: 0 17px;
+    border: none;
+    background: #ff7900;
+    color: #111;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.header-search button:hover {
+    background: #e56700;
+}
+
+/* دکمه‌های هدر */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.header-action {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 40px;
+    padding: 8px 11px;
+    border: 1px solid #383838;
+    border-radius: 10px;
+    color: #eee;
+    background: #202020;
+    text-decoration: none;
+    font-size: 13px;
+    white-space: nowrap;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.header-action:hover {
+    color: #ff7900;
+    border-color: #ff7900;
+    background: #292019;
+}
+
+.cart-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 19px;
+    height: 19px;
+    padding: 0 4px;
+    border-radius: 50px;
+    background: #ff7900;
+    color: #111;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+/* نام کاربر */
+
+.header-user-name {
+    display: inline-block;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #ff7900;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* منوی دسته‌بندی */
+
+.header-nav {
+    border-top: 1px solid #292929;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-list a {
+    display: block;
+    padding: 14px 16px;
+    color: #c9c9c9;
+    text-decoration: none;
+    font-size: 13px;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    color: #ff7900;
+}
+
+/* =========================
+   لپ‌تاپ و تبلت
+========================= */
+
+@media (max-width: 1000px) {
+    .header-main {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .site-logo {
+        order: 1;
+    }
+
+    .header-actions {
+        order: 2;
+        margin-inline-start: auto;
+        gap: 7px;
+    }
+
+    .header-search {
+        order: 3;
+        flex: 1 1 100%;
+        max-width: none;
+    }
+
+    .nav-list {
+        gap: 0;
+        overflow-x: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #555 #151515;
+    }
+
+    .nav-list a {
+        padding: 13px 12px;
+    }
+}
+
+/* =========================
+   موبایل
+========================= */
+
+@media (max-width: 600px) {
+    .site-header .container {
+        width: calc(100% - 20px);
+    }
+
+    .header-main {
+        gap: 12px;
+        padding: 13px 0;
+    }
+
+    .logo-icon {
+        width: 37px;
+        height: 37px;
+        border-radius: 10px;
+        font-size: 21px;
+    }
+
+    .logo-text {
+        font-size: 15px;
+    }
+
+    .header-actions {
+        gap: 6px;
+    }
+
+    .header-action {
+        min-height: 36px;
+        gap: 5px;
+        padding: 7px 9px;
+        font-size: 12px;
+    }
+
+    .header-user-name {
+        max-width: 76px;
+        font-size: 12px;
+    }
+
+    .header-search {
+        height: 43px;
+        border-radius: 10px;
+    }
+
+    .header-search input {
+        font-size: 12px;
+    }
+
+    .header-search button {
+        padding: 0 12px;
+        font-size: 12px;
+    }
+
+    .search-icon {
+        padding: 0 8px;
+        font-size: 22px;
+    }
+
+    .nav-list a {
+        padding: 12px 11px;
+        font-size: 12px;
+    }
+}
+
+/* =========================
+   موبایل‌های باریک
+========================= */
+
+@media (max-width: 400px) {
+    .site-header .container {
+        width: calc(100% - 16px);
+    }
+
+    .header-main {
+        gap: 10px;
+    }
+
+    .logo-text {
+        font-size: 13px;
+    }
+
+    .logo-icon {
+        width: 33px;
+        height: 33px;
+        font-size: 19px;
+    }
+
+    .header-actions {
+        gap: 4px;
+    }
+
+    .header-action {
+        min-height: 34px;
+        padding: 6px 7px;
+        font-size: 11px;
+    }
+
+    .header-user-name {
+        max-width: 58px;
+    }
+
+    .header-search button {
+        padding: 0 9px;
+    }
+}

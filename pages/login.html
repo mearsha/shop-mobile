@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود به حساب | موبایل‌شاپ</title>
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/auth.css">
+
+    <script src="../js/auth.js" defer></script>
+</head>
+<body class="auth-page">
+
+    <main class="auth-container">
+        <section class="auth-card">
+
+            <a href="../index.html" class="auth-logo">
+                <span class="logo-icon">M</span>
+                <span>موبایل<span class="logo-orange">‌شاپ</span></span>
+            </a>
+
+            <div class="auth-heading">
+                <h1>خوش برگشتی!</h1>
+                <p>برای ورود به حساب کاربریت اطلاعاتت رو وارد کن.</p>
+            </div>
+
+            <form id="loginForm" class="auth-form">
+
+                <div class="form-group">
+                    <label for="loginPhone">شماره موبایل</label>
+                    <input
+                        type="tel"
+                        id="loginPhone"
+                        name="phone"
+                        placeholder="مثلاً 09123456789"
+                        autocomplete="tel"
+                        inputmode="numeric"
+                        pattern="09[0-9]{9}"
+                        maxlength="11"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="loginPassword">رمز عبور</label>
+
+                    <div class="password-wrapper">
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            name="password"
+                            placeholder="رمز عبورت رو وارد کن"
+                            autocomplete="current-password"
+                            required>
+
+                        <button
+                            type="button"
+                            class="toggle-password"
+                            data-target="loginPassword">
+                            نمایش
+                        </button>
+                    </div>
+                </div>
+
+                <p
+                    id="loginMessage"
+                    class="auth-message"
+                    role="status"
+                    aria-live="polite">
+                </p>
+
+                <button type="submit" class="auth-submit">
+                    ورود به حساب
+                </button>
+
+            </form>
+
+            <div class="auth-switch">
+                <span>هنوز حساب نداری؟</span>
+                <a href="register.html">ثبت‌نام کن</a>
+            </div>
+
+            <a href="../index.html" class="back-home">
+                بازگشت به صفحه اصلی
+            </a>
+
+        </section>
+    </main>
+
+</body>
+</html>

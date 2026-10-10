@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسویه‌حساب | موبایل‌شاپ</title>
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+
+    <script src="../js/header.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/checkout.js" defer></script>
+</head>
+<body>
+
+    <div id="siteHeader"></div>
+
+    <main class="checkout-page">
+        <div class="checkout-container">
+
+            <div class="checkout-heading">
+                <h1>تکمیل سفارش</h1>
+                <p>اطلاعات ارسال سفارش خود را وارد کن.</p>
+            </div>
+
+            <form id="checkoutForm" class="checkout-layout">
+
+                <section class="checkout-form-section">
+                    <h2>اطلاعات گیرنده</h2>
+
+                    <label for="receiverName">نام و نام خانوادگی</label>
+                    <input type="text" id="receiverName" required maxlength="100">
+
+                    <label for="receiverPhone">شماره موبایل</label>
+                    <input
+                        type="tel"
+                        id="receiverPhone"
+                        inputmode="numeric"
+                        pattern="09[0-9]{9}"
+                        placeholder="09123456789"
+                        required
+                    >
+
+                    <label for="receiverAddress">آدرس کامل</label>
+                    <textarea
+                        id="receiverAddress"
+                        rows="4"
+                        maxlength="1000"
+                        placeholder="استان، شهر، خیابان، پلاک و واحد"
+                        required
+                    ></textarea>
+
+                    <h2 class="payment-heading">روش پرداخت</h2>
+
+                    <label class="payment-option">
+                        <input type="radio" name="paymentMethod" value="پرداخت هنگام تحویل" checked>
+                        پرداخت هنگام تحویل
+                    </label>
+
+                    <p class="checkout-note">
+                        در این مرحله پرداخت اینترنتی نداریم؛ این گزینه فقط روش پرداخت ثبت‌شده در سفارش را مشخص می‌کند.
+                    </p>
+                </section>
+
+                <aside class="checkout-summary">
+                    <h2>خلاصه سفارش</h2>
+
+                    <div id="checkoutItems">
+                        <p>در حال بارگذاری محصولات...</p>
+                    </div>
+
+                    <div class="checkout-total">
+                        <span>مبلغ قابل پرداخت</span>
+                        <strong id="checkoutTotal">۰ تومان</strong>
+                    </div>
+
+                    <p id="checkoutMessage" class="checkout-message" role="status"></p>
+
+                    <button type="submit" id="placeOrderBtn">
+                        ثبت نهایی سفارش
+                    </button>
+                </aside>
+
+            </form>
+        </div>
+    </main>
+
+    <div id="siteFooter"></div>
+
+</body>
+</html>

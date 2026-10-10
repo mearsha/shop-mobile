@@ -1,0 +1,151 @@
+/* ===== فوتر فروشگاه ===== */
+
+.site-footer {
+    margin-top: 50px;
+    padding-top: 45px;
+    background: #111111;
+    color: #eeeeee;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 35px;
+    padding-bottom: 35px;
+}
+
+.footer-brand {
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.footer-brand span {
+    color: var(--primary-color);
+}
+
+.footer-description {
+    max-width: 300px;
+    color: #aaaaaa;
+    font-size: 13px;
+    line-height: 2.2;
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.footer-links {
+    display: grid;
+    gap: 10px;
+}
+
+.footer-links a {
+    width: fit-content;
+    color: #aaaaaa;
+    font-size: 13px;
+    transition: color 0.25s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-block: 18px;
+    border-top: 1px solid #333333;
+    color: #999999;
+    font-size: 12px;
+}
+
+.footer-bottom strong {
+    color: var(--primary-color);
+}
+
+@media (max-width: 800px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-footer {
+        padding-top: 32px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 15px;
+    }
+
+    .footer-brand-column {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* ===== بهبود ظاهر فوتر ===== */
+
+.site-footer {
+    background:
+        radial-gradient(ellipse at 85% 0%, #ff790012, transparent 40%),
+        #111111;
+    border-top: 1px solid #ff790030;
+}
+
+.footer-brand {
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.footer-column h3 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.footer-column h3::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+.footer-links a {
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+    transform: translateX(-3px);
+}
+
+.footer-bottom {
+    border-top-color: #303030;
+}
+
+.footer-bottom strong {
+    text-shadow: 0 0 12px #ff790055;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .footer-links a {
+        transition: none;
+    }
+}

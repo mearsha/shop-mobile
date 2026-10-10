@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>همه محصولات | موبایل‌شاپ</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/products.css">
+
+    <script src="../js/header.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/cart.js" defer></script>
+    <script src="../js/products.js" defer></script>
+    <script src="../js/favorites.js" defer></script>
+</head>
+
+<body>
+
+    <div id="siteHeader"></div>
+
+    <main class="container products-page">
+
+        <div class="products-heading">
+            <h1>همه محصولات</h1>
+            <p>گوشی مورد علاقه‌ات رو انتخاب کن 🧡</p>
+        </div>
+
+         <div class="products-toolbar">
+    <span>محصولات موبایل‌شاپ</span>
+
+    <div class="products-filters">
+            <select id="filterBrand" aria-label="فیلتر برند">
+                <option value="">همه برندها</option>
+                <option value="Apple">اپل</option>
+                <option value="Samsung">سامسونگ</option>
+                <option value="Xiaomi">شیائومی</option>
+                <option value="POCO">پوکو</option>
+            </select>
+
+            <input
+                type="number"
+                id="minPrice"
+                placeholder="حداقل قیمت (تومان)"
+                min="0"
+                aria-label="حداقل قیمت به تومان"
+            >
+
+            <input
+                type="number"
+                id="maxPrice"
+                placeholder="حداکثر قیمت (تومان)"
+                min="0"
+                aria-label="حداکثر قیمت به تومان"
+            >
+
+            <select id="sortProducts" aria-label="مرتب‌سازی محصولات">
+                <option value="default">مرتب‌سازی پیش‌فرض</option>
+                <option value="price-low">ارزان‌ترین</option>
+                <option value="price-high">گران‌ترین</option>
+                <option value="name">نام محصول</option>
+            </select>
+
+            <button type="button" id="applyFilters">اعمال فیلتر</button>
+            <button type="button" id="clearFilters">حذف فیلترها</button>
+        </div>
+    </div>
+
+        <section id="productsGrid" class="products-grid">
+            <p>در حال بارگذاری محصولات...</p>
+        </section>
+
+    </main>
+
+    <div id="siteFooter"></div>
+
+</body>
+</html>

@@ -1,0 +1,1010 @@
+/* ===== بنر اصلی فروشگاه ===== */
+
+.hero {
+    position: relative;
+    min-height: 470px;
+    margin-top: 28px;
+    overflow: hidden;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 55px 6%;
+    color: #fff;
+    background:
+        radial-gradient(ellipse at 75% 50%, #542306 0%, transparent 42%),
+        linear-gradient(120deg, #080808, #17120f 65%, #080808);
+    border: 1px solid #49301d;
+    border-radius: 24px;
+    box-shadow: 0 15px 55px #00000025;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 390px;
+    height: 390px;
+    top: 50%;
+    right: 14%;
+    transform: translateY(-50%);
+    border: 2px solid #ff791c;
+    border-radius: 50%;
+    box-shadow:
+        0 0 20px #ff791c,
+        0 0 65px #ff791c66,
+        inset 0 0 45px #ff791c30;
+    animation: heroGlow 4s ease-in-out infinite alternate;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 180px;
+    height: 650px;
+    top: -100px;
+    right: 47%;
+    transform: rotate(35deg);
+    background: linear-gradient(
+        transparent,
+        #ff6a0022,
+        #ff6a0060,
+        transparent
+    );
+    filter: blur(15px);
+    pointer-events: none;
+}
+
+/* متن بنر */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 520px;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 15px;
+    color: #ff8a32;
+    border: 1px solid #ff791c;
+    border-radius: 50px;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.hero-title {
+    font-size: clamp(30px, 4vw, 53px);
+    line-height: 1.5;
+    font-weight: 900;
+    margin-bottom: 14px;
+}
+
+.hero-title span {
+    display: block;
+    color: #ff791c;
+    text-shadow: 0 0 30px #ff791c44;
+}
+
+.hero-description {
+    max-width: 430px;
+    color: #bcbcbc;
+    font-size: 15px;
+    line-height: 2.1;
+    margin-bottom: 28px;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 13px 24px;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff922e, #f45b00);
+    border-radius: 50px;
+    box-shadow: 0 7px 25px #ff6a0040;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px #ff6a0070;
+}
+
+/* تصویر گوشی؛ فعلاً با CSS ساخته شده */
+
+.hero-visual {
+    position: relative;
+    z-index: 1;
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 900px;
+}
+
+.phone-stage {
+    position: relative;
+    width: 190px;
+    height: 340px;
+    border: 2px solid #777;
+    border-radius: 34px;
+    padding: 8px;
+    background: linear-gradient(130deg, #aaa, #242424 30%, #080808 70%, #777);
+    box-shadow:
+        15px 20px 45px #000,
+        0 0 30px #ff791c44;
+    transform: rotate(-7deg);
+    animation: phoneFloat 5s ease-in-out infinite;
+}
+
+.phone-screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 26px;
+    background:
+        radial-gradient(ellipse at 60% 25%, #ff9c52 0%, transparent 25%),
+        radial-gradient(ellipse at 30% 70%, #a73510 0%, transparent 35%),
+        linear-gradient(145deg, #171717, #080808 60%, #53220f);
+}
+
+.phone-screen::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 250px;
+    top: 45px;
+    right: -75px;
+    border: 3px solid #ff8b35;
+    border-radius: 50%;
+    transform: rotate(35deg);
+    box-shadow: 0 0 25px #ff6a0080;
+}
+
+.phone-screen::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65px;
+    height: 19px;
+    background: #050505;
+    border-radius: 20px;
+}
+
+.phone-camera {
+    position: absolute;
+    top: 24px;
+    right: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 27px);
+    gap: 7px;
+    z-index: 2;
+}
+
+.phone-camera span {
+    width: 27px;
+    height: 27px;
+    border: 3px solid #777;
+    border-radius: 50%;
+    background: radial-gradient(circle, #31506c, #080808 65%);
+    box-shadow: 0 0 0 2px #222;
+}
+
+.phone-camera span:last-child {
+    grid-column: 1 / 2;
+}
+
+.hero-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 38px;
+    color: #d2d2d2;
+    font-size: 12px;
+}
+
+.hero-feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-feature span {
+    color: #ff791c;
+    font-size: 20px;
+}
+
+@keyframes phoneFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(-7deg);
+    }
+    50% {
+        transform: translateY(-12px) rotate(-4deg);
+    }
+}
+
+@keyframes heroGlow {
+    from {
+        opacity: 0.65;
+        box-shadow: 0 0 20px #ff791c, inset 0 0 35px #ff791c20;
+    }
+    to {
+        opacity: 1;
+        box-shadow: 0 0 35px #ff791c, 0 0 80px #ff791c55,
+                    inset 0 0 55px #ff791c40;
+    }
+}
+
+/* تبلت و موبایل */
+
+@media (max-width: 800px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 38px 7%;
+        gap: 5px;
+    }
+
+    .hero-content {
+        order: 1;
+    }
+
+    .hero-visual {
+        order: 0;
+        min-height: 290px;
+    }
+
+    .phone-stage {
+        width: 150px;
+        height: 270px;
+    }
+
+    .hero::before {
+        width: 290px;
+        height: 290px;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    .hero-title {
+        font-size: 34px;
+    }
+
+    .hero-features {
+        gap: 14px;
+        margin-top: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        margin-top: 16px;
+        padding: 28px 20px;
+        border-radius: 18px;
+    }
+
+    .hero-visual {
+        min-height: 255px;
+    }
+
+    .phone-stage {
+        width: 135px;
+        height: 240px;
+    }
+
+    .hero-title {
+        font-size: 29px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-button {
+        width: 100%;
+    }
+
+    .hero-features {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .phone-stage,
+    .hero::before {
+        animation: none;
+    }
+}
+
+
+
+
+.hero-phone-image {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: min(100%, 430px);
+    height: 390px;
+    object-fit: contain;
+    filter: drop-shadow(0 15px 35px #ff791c55);
+    animation: realPhoneFloat 5s ease-in-out infinite;
+}
+
+@keyframes realPhoneFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(1deg);
+    }
+}
+
+@media (max-width: 800px) {
+    .hero-phone-image {
+        height: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-phone-image {
+        height: 270px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-phone-image {
+        animation: none;
+    }
+}
+
+
+
+
+
+
+
+
+/* ===== جدیدترین گوشی‌ها ===== */
+
+.latest-products {
+    padding-block: 55px;
+}
+
+.products-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.products-heading h2 {
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.products-heading p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.view-all {
+    color: var(--primary-color);
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    min-width: 0;
+    overflow: hidden;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    border-color: #FF7900;
+    box-shadow: 0 12px 30px #FF790025;
+}
+
+.product-image {
+    position: relative;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background: radial-gradient(ellipse at center, #292929 0%, #181818 75%);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.06);
+}
+
+.product-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 4px 10px;
+    color: #fff;
+    background: var(--primary-color);
+    border-radius: 7px;
+    font-size: 11px;
+}
+
+.product-info {
+    padding: 17px;
+}
+
+.product-brand {
+    color: var(--text-muted);
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.product-name {
+    min-height: 52px;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.8;
+}
+
+.product-price {
+    margin-top: 12px;
+    font-size: 17px;
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+.product-price small {
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.product-details-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    color: var(--primary-color);
+    font-size: 13px;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.product-details-link:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .product-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .latest-products {
+        padding-block: 35px;
+    }
+
+    .products-heading h2 {
+        font-size: 21px;
+    }
+
+    .products-heading p {
+        font-size: 12px;
+    }
+
+    .product-image {
+        height: 165px;
+        padding: 12px;
+    }
+
+    .product-info {
+        padding: 12px;
+    }
+
+    .product-name {
+        font-size: 13px;
+    }
+
+    .product-price {
+        font-size: 14px;
+    }
+
+    .product-details-link {
+        font-size: 12px;
+    }
+}
+
+
+/* ===== دسته‌بندی برندها ===== */
+
+.brand-categories {
+    padding-block: 50px;
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: 25px;
+    font-weight: 900;
+    color: var(--text-color);
+}
+
+.section-heading p {
+    margin-top: 8px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.brand-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 175px;
+    padding: 22px 12px;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+    background: linear-gradient(145deg, #202020, #141414);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.brand-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px #ff790020;
+}
+
+.brand-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 58px;
+    height: 58px;
+    padding: 0 10px;
+    margin-bottom: 13px;
+    color: var(--primary-color);
+    background: #ff790015;
+    border: 1px solid #ff790040;
+    border-radius: 16px;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.brand-card h3 {
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.brand-card p {
+    margin-top: 5px;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.brand-arrow {
+    position: absolute;
+    top: 12px;
+    left: 14px;
+    color: var(--primary-color);
+    opacity: 0;
+    transform: translateX(5px);
+    transition: 0.3s ease;
+}
+
+.brand-card:hover .brand-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 700px) {
+    .brands-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .brand-categories {
+        padding-block: 35px;
+    }
+
+    .section-heading h2 {
+        font-size: 20px;
+    }
+
+    .brand-card {
+        min-height: 155px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .brand-card,
+    .brand-arrow {
+        transition: none;
+    }
+}
+
+
+
+
+/* ===== مزیت‌های موبایل‌شاپ ===== */
+
+.why-us {
+    padding-block: 45px 65px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.benefit-card {
+    position: relative;
+    padding: 28px 22px;
+    overflow: hidden;
+    background: linear-gradient(145deg, #202020, #151515);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.benefit-card::before {
+    content: "";
+    position: absolute;
+    top: -45px;
+    left: -45px;
+    width: 110px;
+    height: 110px;
+    background: #ff790012;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 12px 30px #ff790018;
+}
+
+.benefit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    background: #ff790015;
+    border: 1px solid #ff790040;
+    border-radius: 16px;
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.benefit-card h3 {
+    margin-bottom: 12px;
+    color: var(--text-color);
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.benefit-card p {
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 2.1;
+}
+
+@media (max-width: 800px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .benefit-card {
+        padding: 22px;
+    }
+
+    .benefit-icon {
+        margin-bottom: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .benefit-card {
+        transition: none;
+    }
+}
+
+
+/* ===== دکمه دوم بنر ===== */
+
+.hero-secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-right: 12px;
+    padding: 12px 20px;
+    color: #f5f5f5;
+    background: #ffffff08;
+    border: 1px solid #ffffff30;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.hero-secondary-button:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    background: #ff790012;
+}
+
+@media (max-width: 480px) {
+    .hero-secondary-button {
+        width: 100%;
+        margin: 12px 0 0;
+    }
+}
+
+
+
+/* ===== بنر منتخب‌های موبایل‌شاپ ===== */
+
+.popular-products {
+    padding-block: 20px 45px;
+}
+
+.popular-banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 250px;
+    padding: 35px 6%;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 15% 50%, #ff790025, transparent 45%),
+        linear-gradient(120deg, #1e1e1e, #101010);
+    border: 1px solid #ff790045;
+    border-radius: 22px;
+}
+
+.popular-content {
+    position: relative;
+    z-index: 2;
+    max-width: 570px;
+}
+
+.popular-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--primary-color);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.popular-content h2 {
+    color: var(--text-color);
+    font-size: clamp(24px, 3vw, 34px);
+    font-weight: 900;
+    line-height: 1.7;
+}
+
+.popular-content p {
+    margin-top: 8px;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.popular-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 22px;
+    padding: 12px 20px;
+    color: #fff;
+    background: var(--primary-color);
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.popular-button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+.popular-decoration {
+    position: absolute;
+    left: 7%;
+    top: 50%;
+    transform: translateY(-50%) rotate(-12deg);
+    color: #ff790015;
+    font-size: clamp(130px, 23vw, 250px);
+    font-weight: 900;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+}
+
+@media (max-width: 600px) {
+    .popular-banner {
+        min-height: 230px;
+        padding: 28px 22px;
+        border-radius: 18px;
+    }
+
+    .popular-content h2 {
+        font-size: 24px;
+    }
+
+    .popular-content p {
+        font-size: 13px;
+    }
+
+    .popular-decoration {
+        left: -5%;
+        opacity: 0.7;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .popular-button {
+        transition: none;
+    }
+}
+
+
+/* ===== دکمه علاقه‌مندی کارت محصولات ===== */
+
+.product-image .favorite-toggle {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+    padding: 0;
+
+    color: #d8d8d8;
+    background: rgba(18, 18, 18, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+
+    font-size: 23px;
+    line-height: 1;
+    cursor: pointer;
+
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+/* افکت هنگام رفتن موس روی قلب */
+
+.product-image .favorite-toggle:hover {
+    color: #ff7900;
+    background: #292019;
+    border-color: #ff7900;
+    transform: scale(1.08);
+    box-shadow: 0 0 18px rgba(255, 121, 0, 0.2);
+}
+
+/* محصولی که به علاقه‌مندی‌ها اضافه شده */
+
+.product-image .favorite-toggle.is-favorite {
+    color: #ff7900;
+    background: rgba(255, 121, 0, 0.13);
+    border-color: rgba(255, 121, 0, 0.55);
+}
+
+/* افکت قلب فعال هنگام هاور */
+
+.product-image .favorite-toggle.is-favorite:hover {
+    color: #fff;
+    background: #ff7900;
+    border-color: #ff7900;
+}
+
+/* افکت کلیک */
+
+.product-image .favorite-toggle:active {
+    transform: scale(0.92);
+}
+
+/* نمایش مناسب هنگام انتخاب با کیبورد */
+
+.product-image .favorite-toggle:focus-visible {
+    outline: 2px solid #ff7900;
+    outline-offset: 3px;
+}
+
+/* سازگاری با موبایل */
+
+@media (max-width: 480px) {
+    .product-image .favorite-toggle {
+        top: 8px;
+        left: 8px;
+        width: 36px;
+        height: 36px;
+        border-radius: 12px;
+        font-size: 20px;
+    }
+}
+
+/* احترام به تنظیم کاهش حرکت کاربر */
+
+@media (prefers-reduced-motion: reduce) {
+    .product-image .favorite-toggle {
+        transition: none;
+    }
+}

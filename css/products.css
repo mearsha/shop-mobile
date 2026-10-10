@@ -1,0 +1,468 @@
+/* ================================
+   صفحه محصولات
+================================ */
+
+.products-page {
+    padding-block: 35px 60px;
+    color: #F5F5F5;
+}
+
+.products-heading {
+    margin-bottom: 28px;
+}
+
+.products-heading h1 {
+    color: #FFFFFF;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.products-heading p {
+    color: #A3A3A3;
+    line-height: 1.8;
+}
+
+/* ================================
+   نوار ابزار محصولات
+================================ */
+
+.products-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 25px;
+    padding: 16px;
+    background: #1A1A1A;
+    border: 1px solid #303030;
+    border-radius: 12px;
+    color: #DDD;
+}
+
+.products-toolbar > span {
+    color: #A3A3A3;
+    font-size: 14px;
+}
+
+.products-toolbar select {
+    background: #242424;
+    color: #F5F5F5;
+    border: 1px solid #383838;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-family: inherit;
+    outline: none;
+}
+
+.products-toolbar select:focus {
+    border-color: #FF7900;
+}
+
+/* ================================
+   فیلتر محصولات
+================================ */
+
+.products-filters {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.products-filters select,
+.products-filters input {
+    min-width: 150px;
+    max-width: 100%;
+    height: 43px;
+    padding: 10px 12px;
+    color: #F5F5F5;
+    background: #202020;
+    border: 1px solid #303030;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.products-filters select {
+    cursor: pointer;
+}
+
+.products-filters input {
+    width: 190px;
+}
+
+.products-filters select:focus,
+.products-filters input:focus {
+    border-color: #FF7900;
+    box-shadow: 0 0 0 3px #FF790018;
+}
+
+.products-filters input::placeholder {
+    color: #A3A3A3;
+}
+
+.products-filters input::-webkit-inner-spin-button,
+.products-filters input::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+.products-filters select option {
+    color: #F5F5F5;
+    background: #202020;
+}
+
+.products-filters button {
+    min-height: 43px;
+    padding: 10px 16px;
+    color: #151515;
+    background: #FF7900;
+    border: 1px solid #FF7900;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.25s ease,
+                transform 0.25s ease;
+}
+
+.products-filters button:hover {
+    background: #E56700;
+    transform: translateY(-2px);
+}
+
+.products-filters #clearFilters {
+    color: #F5F5F5;
+    background: #292929;
+    border-color: #303030;
+}
+
+.products-filters #clearFilters:hover {
+    color: #FF7900;
+    background: #333333;
+    border-color: #FF7900;
+}
+
+/* ================================
+   شبکه محصولات
+================================ */
+
+#productsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    color: #F5F5F5;
+}
+
+/* ================================
+   کارت محصول
+================================ */
+
+.product-card {
+    min-width: 0;
+    overflow: hidden;
+    background: #1A1A1A;
+    color: #F5F5F5;
+    border: 1px solid #303030;
+    border-radius: 16px;
+    transition: transform 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: #FF7900;
+}
+
+/* ================================
+   تصویر محصول
+================================ */
+
+.product-image {
+    position: relative;
+    overflow: hidden;
+    background: #202020;
+    padding: 12px;
+}
+
+.product-image img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+}
+
+/* ================================
+   دکمه علاقه‌مندی
+================================ */
+
+.favorite-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: auto;
+    z-index: 5;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    border: 1px solid #FF7900;
+    border-radius: 50%;
+
+    background: #1A1A1A;
+    color: #FF7900;
+
+    font-family: Arial, sans-serif;
+    font-size: 27px;
+    font-weight: bold;
+    line-height: 1;
+
+    cursor: pointer;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+
+    transition: background 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.favorite-toggle:hover {
+    background: #332216;
+    color: #FF7900;
+    border-color: #FF7900;
+    transform: scale(1.08);
+}
+
+.favorite-toggle.is-favorite {
+    background: #FF7900;
+    color: #101010;
+    border-color: #FF7900;
+}
+
+.favorite-toggle:focus-visible {
+    outline: 2px solid #FF7900;
+    outline-offset: 3px;
+}
+
+/* ================================
+   برچسب محصول
+================================ */
+
+.product-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 1;
+    padding: 6px 10px;
+    background: #332216;
+    color: #FF7900;
+    border: 1px solid #593719;
+    border-radius: 7px;
+    font-size: 12px;
+}
+
+/* ================================
+   اطلاعات محصول
+================================ */
+
+.product-info {
+    padding: 15px;
+}
+
+.product-brand {
+    margin-bottom: 7px;
+    color: #A3A3A3;
+    font-size: 13px;
+}
+
+.product-name {
+    margin-bottom: 12px;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.product-price {
+    margin-bottom: 15px;
+    color: #FF7900;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.8;
+}
+
+/* ================================
+   لینک جزئیات محصول
+================================ */
+
+.product-details-link {
+    display: block;
+    padding: 11px 12px;
+    background: #FF7900;
+    color: #151515;
+    border: 1px solid #FF7900;
+    border-radius: 9px;
+    text-align: center;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+    transition: background 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.product-details-link:hover {
+    background: #E56700;
+    border-color: #E56700;
+}
+
+/* ================================
+   لینک بازگشت از علاقه‌مندی‌ها
+================================ */
+
+.favorites-back-link {
+    color: #FF7900;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.favorites-back-link:hover {
+    color: #E56700;
+}
+
+/* ================================
+   تبلت
+================================ */
+
+@media (max-width: 900px) {
+    #productsGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .product-image img {
+        height: 190px;
+    }
+
+    .products-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .products-filters {
+        width: 100%;
+    }
+
+    .products-filters select,
+    .products-filters input {
+        flex: 1 1 180px;
+    }
+}
+
+/* ================================
+   موبایل
+================================ */
+
+@media (max-width: 600px) {
+    .products-page {
+        padding-block: 25px 40px;
+    }
+
+    .products-heading h1 {
+        font-size: 23px;
+    }
+
+    #productsGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .product-card {
+        border-radius: 12px;
+    }
+
+    .product-image {
+        padding: 8px;
+    }
+
+    .product-image img {
+        height: 155px;
+    }
+
+    .product-info {
+        padding: 11px;
+    }
+
+    .product-name {
+        font-size: 14px;
+    }
+
+    .product-price {
+        font-size: 13px;
+    }
+
+    .product-details-link {
+        padding: 10px 6px;
+        font-size: 12px;
+    }
+
+    .products-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .products-filters {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .products-filters select,
+    .products-filters input {
+        width: 100%;
+        min-width: 0;
+        height: 44px;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .products-filters button {
+        width: 100%;
+        min-height: 44px;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .favorite-toggle {
+        top: 8px;
+        left: 8px;
+        width: 36px;
+        height: 36px;
+        font-size: 25px;
+    }
+}
+
+/* ================================
+   کاهش انیمیشن
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    .product-card,
+    .product-details-link,
+    .favorite-toggle,
+    .favorites-back-link,
+    .products-filters select,
+    .products-filters input,
+    .products-filters button {
+        transition: none;
+    }
+}

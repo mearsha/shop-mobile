@@ -1,0 +1,359 @@
+/* صفحه پروفایل */
+
+.profile-page {
+    min-height: 70vh;
+    padding: 45px 0 70px;
+    color: var(--text-color);
+}
+
+.profile-page .container {
+    width: min(1200px, calc(100% - 32px));
+    margin-inline: auto;
+}
+
+.profile-heading {
+    margin-bottom: 30px;
+}
+
+.profile-heading h1 {
+    margin: 0 0 10px;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.profile-heading h1::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 27px;
+    margin-left: 12px;
+    vertical-align: middle;
+    border-radius: 5px;
+    background: var(--primary-color);
+}
+
+.profile-heading p,
+.profile-section-heading p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* چیدمان پروفایل */
+
+.profile-layout {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    align-items: start;
+    gap: 24px;
+}
+
+/* ستون کناری */
+
+.profile-sidebar,
+.profile-content {
+    min-width: 0;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-lg);
+}
+
+.profile-sidebar {
+    padding: 28px 20px;
+    text-align: center;
+}
+
+.profile-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 88px;
+    height: 88px;
+    margin: 0 auto 15px;
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    background: #332216;
+    color: var(--primary-color);
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.profile-sidebar h2 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    overflow-wrap: anywhere;
+}
+
+.profile-sidebar > p {
+    margin: 0 0 25px;
+    color: var(--text-muted);
+    font-size: 13px;
+    direction: ltr;
+}
+
+/* منوی پروفایل */
+
+.profile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.profile-menu-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 45px;
+    padding: 12px 14px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--text-color);
+    text-align: right;
+    text-decoration: none;
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.profile-menu-link:hover,
+.profile-menu-link.active {
+    border-color: #55351c;
+    background: #2a2019;
+    color: var(--primary-color);
+}
+
+.logout-profile {
+    margin-top: 5px;
+    color: #ff7777;
+}
+
+.logout-profile:hover {
+    border-color: #6b3030;
+    background: #301b1b;
+    color: #ff7777;
+}
+
+/* بخش اطلاعات */
+
+.profile-content {
+    padding: 30px;
+}
+
+.profile-section-heading {
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profile-section-heading h2 {
+    margin: 0 0 10px;
+    font-size: 21px;
+}
+
+/* فرم */
+
+.profile-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.profile-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
+.profile-field label {
+    color: #e8e8e8;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.profile-field input {
+    width: 100%;
+    min-width: 0;
+    height: 48px;
+    padding: 0 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    outline: none;
+    background: #121212;
+    color: var(--text-color);
+    font: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+
+.profile-field input:focus {
+    border-color: var(--primary-color);
+}
+
+.profile-field input[readonly] {
+    color: var(--text-muted);
+    cursor: not-allowed;
+    background: #191919;
+}
+
+.profile-field small {
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+.profile-message {
+    grid-column: 1 / -1;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.profile-message.success {
+    color: var(--success-color);
+}
+
+.profile-message.error {
+    color: var(--danger-color);
+}
+
+.profile-save-btn {
+    justify-self: start;
+    min-height: 46px;
+    padding: 0 26px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary-color);
+    color: #111;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.profile-save-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+/* تبلت */
+
+@media (max-width: 850px) {
+    .profile-layout {
+        grid-template-columns: 220px minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .profile-sidebar {
+        padding: 24px 14px;
+    }
+
+    .profile-content {
+        padding: 24px 20px;
+    }
+
+    .profile-form {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}
+
+/* موبایل */
+
+@media (max-width: 600px) {
+    .profile-page {
+        padding: 28px 0 45px;
+    }
+
+    .profile-page .container {
+        width: calc(100% - 24px);
+    }
+
+    .profile-heading {
+        margin-bottom: 20px;
+    }
+
+    .profile-heading h1 {
+        font-size: 23px;
+    }
+
+    .profile-heading h1::before {
+        height: 23px;
+    }
+
+    .profile-layout {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .profile-sidebar {
+        padding: 22px 16px;
+    }
+
+    .profile-avatar {
+        width: 72px;
+        height: 72px;
+        font-size: 29px;
+    }
+
+    .profile-sidebar > p {
+        margin-bottom: 18px;
+    }
+
+    .profile-menu {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        padding-top: 16px;
+    }
+
+    .profile-menu-link {
+        justify-content: center;
+        padding: 11px 8px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .profile-content {
+        padding: 22px 16px;
+    }
+
+    .profile-section-heading h2 {
+        font-size: 19px;
+    }
+
+    .profile-save-btn {
+        width: 100%;
+    }
+}
+
+/* جلوگیری از سفید شدن اینپوت‌های پروفایل هنگام Autofill مرورگر */
+
+.profile-page input,
+.profile-page input:-webkit-autofill,
+.profile-page input:-webkit-autofill:hover,
+.profile-page input:-webkit-autofill:focus,
+.profile-page input:-webkit-autofill:active {
+    -webkit-text-fill-color: var(--text-color);
+    caret-color: var(--primary-color);
+    transition: background-color 999999s ease-in-out 0s;
+    box-shadow: 0 0 0 1000px #121212 inset;
+    border-color: var(--border-color);
+}
+
+.profile-page input:focus {
+    border-color: var(--primary-color);
+}
+
+/* اینپوت فقط‌خواندنی، مثل شماره موبایل */
+
+.profile-page input[readonly],
+.profile-page input[readonly]:-webkit-autofill {
+    -webkit-text-fill-color: var(--text-muted);
+    box-shadow: 0 0 0 1000px #191919 inset;
+}
